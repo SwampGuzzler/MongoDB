@@ -1,7 +1,8 @@
 'use' strict;
-var express  = require('express');
-var http	 = require('http');
-var mongoose = require('mongoose');
+var express 	= require('express');
+var http	 	= require('http');
+var mongoose 	= require('mongoose');
+var noteRoutes 	= require('./routes/noteRoutes');
 
 var app = express();
 
@@ -14,5 +15,5 @@ app.set('port', process.env.PORT || 3000);
 var server = http.createServer(app);
 
 server.listen(app.get('port'), function() {
-	console.log('The server is listening on port ' + app.get('port'));
+  console.log('the server is running on port ' + app.get('port');
 });
