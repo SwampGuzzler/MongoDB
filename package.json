@@ -1,9 +1,13 @@
 {
-	"name": "notes",
-	"description": "a note taking app",
-	"version": "0.0.1",
-	"dependencies": {
-		"express": "^4.1",
-		"mongoose": "^3.8"
-	}
+  "name": "notes",
+  "description": "a note taking app",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.1",
+    "mongoose": "^3.8",
+    "body-parser": "^1.0"
+  },
+  "devDependencies": {
+    "browserify": "^4.1.3"
+  }
 }

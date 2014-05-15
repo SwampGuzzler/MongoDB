@@ -1,0 +1,21 @@
+{
+  "name": "notes",
+  "version": "0.0.0",
+  "authors": [
+    "Lucas Cotner <lc07@uw.edu>"
+  ],
+  "description": "notes example",
+  "keywords": [
+    "bower"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
