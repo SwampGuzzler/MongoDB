@@ -5,9 +5,25 @@
   "dependencies": {
     "express": "^4.1",
     "mongoose": "^3.8",
-    "body-parser": "^1.0"
+    "body-parser": "^1.0",
+    "superagent": "^0.18.0"
   },
   "devDependencies": {
-    "browserify": "^4.1.3"
+    "browserify": "^4.1.3",
+    "superagent": "^0.18.0",
+    "grunt": "^0.4.5",
+    "chai": "^1.9.1",
+    "debowerify": "^0.7.1",
+    "mocha": "^1.19.0",
+    "grunt-casper": "^0.3.8",
+    "grunt-browserify": "^2.1.0",
+    "grunt-express-server": "^0.4.17",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-simple-mocha": "^0.4.0",
+    "grunt-mocha-test": "^0.10.2",
+    "matchdep": "^0.3.0"
   }
 }

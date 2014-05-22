@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 module.exports = function(grunt) {
 
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['app/js/**/*.js','test/**/*.js']
+        files: ['dist/js/**/*.js','test/**/*.js']
       },
       express: {
           files: ['server.js'],
@@ -88,9 +88,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('server', [ 'build', 'express:dev','watch' ]);
   
-  grunt.registerTask('test:acceptance',['express:dev','casper']);
-  grunt.registerTask('test:api','simplemocha');
-  grunt.registerTask('test',['test:acceptance','test:api']);
+  //grunt.registerTask('test:acceptance',['express:dev','casper']);
+  //grunt.registerTask('test:api','simplemocha');
+  //grunt.registerTask('test',['test:acceptance','test:api']);
   grunt.registerTask('default', ['jshint', 'test']);
   grunt.registerTask('build',['clean', 'browserify', 'copy']);
 };
