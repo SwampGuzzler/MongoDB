@@ -18,7 +18,7 @@ describe('Notes JSON api', function() {
     it('can successfully create a new note', function(done) {
         superagent.post(resourceUrl)
             .send({
-                body: 'a new note!'
+                body: 'a new note!!'
             })
             .end(function(err, res) {
                 expect(err).to.eql(null);
