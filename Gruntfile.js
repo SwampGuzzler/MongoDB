@@ -90,7 +90,8 @@ module.exports = function(grunt) {
   
   //grunt.registerTask('test:acceptance',['express:dev','casper']);
   //grunt.registerTask('test:api','simplemocha');
-  //grunt.registerTask('test',['test:acceptance','test:api']);
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('test',['jshint','simplemocha']);
+  grunt.registerTask('default', ['simplemocha', 'test']);
+
   grunt.registerTask('build',['clean', 'browserify', 'copy']);
 };

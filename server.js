@@ -8,7 +8,7 @@ var bodyparser 	= require('body-parser');
 var app = express();
 
 app.use(bodyparser.json());
-app.use(express.static, __dirname + '/dist');
+app.use(express.static(__dirname + '/dist'));
 
 
 app.get('/api/v1/notes', noteRoutes.collection);

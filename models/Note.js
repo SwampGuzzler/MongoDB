@@ -4,7 +4,7 @@
 var mongoose = require('mongoose');
 
 var noteSchema = mongoose.Schema({
-	notebody: String // Each note is going to have a Field of body which has a type of String
+	noteBody: String // Each note is going to have a Field of body which has a type of String
 });
 
 module.exports = mongoose.model('Note', noteSchema);
