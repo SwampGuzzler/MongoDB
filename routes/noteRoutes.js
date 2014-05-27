@@ -4,13 +4,16 @@ var Note = require('../models/Note');
 module.exports.collection = function(req, res) {
   res.setHeader('Content-Type', 'application/json');
   console.dir(req.params);
-  Note.find({'_id': req.params.id}, function(err, users) {
-    if(err) {
-      res.send(500, {"err": err});
-      return false;
-    }
-    res.send(users);
-  });
+  Note.find({}, function(err, users) {
+        if (err) {
+            res.send(500, {
+                err: err
+            });
+            return false;
+        }
+        res.send(users);
+
+    });
 };
 
 module.exports.findById = function(req, res) {
@@ -47,7 +50,7 @@ exports.update = function(req, res) {
                        res.send(500, {error: err});
       return false;
     }
-    res.send({"message": "success!"});
+    res.send({"message": "Updated!"});
   })
 };
 
@@ -58,6 +61,6 @@ exports.destroy = function(req, res) {
       res.send(500, {error: err});
       return false;
     }
-    res.send({"message" : "success!"});
+    res.send({"message" : "Destroyed!!"});
   });
 };
