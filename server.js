@@ -14,8 +14,12 @@ app.use(express.static(__dirname + '/dist'));
 app.get('/api/v1/notes', noteRoutes.collection);
 app.get('/api/v0_0_1/notes/:id', noteRoutes.findById);
 app.post('/api/v0_0_1/notes', noteRoutes.create);
+app.put('/api/v0_0_1/notes/:id', noteRoutes.update);
+app.delete('/api/v0_0_1/notes/:id', noteRoutes.destroy);
+
 
 mongoose.connect('mongodb://localhost/notes-development'); // Mongo just creates the DB here; name is notes-development
+
 
 app.set('port', process.env.PORT || 3000);
 

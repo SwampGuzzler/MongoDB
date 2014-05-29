@@ -40,7 +40,7 @@ describe('Notes JSON api', function() {
                 done();
             });
     });
-/*
+
     it('can successfully update a note', function(done) {
         superagent.put(resourceUrl + '/' + id)
             .send({
@@ -62,5 +62,4 @@ describe('Notes JSON api', function() {
                 done();
             });
     });
-*/
 });
