@@ -3,13 +3,12 @@
 var superagent 	= require('superagent');
 var chai 		= require('chai');
 var expect		= chai.expect;
-
+var should      = chai.should();
 var app 		= require('../../server.js');
 var port 		= process.env.PORT || 3000;
-var resourceURL = 'http://localhost:' + port;
 
 
-//var resourceUrl = 'http://localhost:' + port + '/api/v0_0_1/notes';
+var resourceUrl = 'http://localhost:' + port + '/api/v0_0_1/notes';
 
 describe('Notes JSON api', function() {
     var id;
@@ -18,7 +17,7 @@ describe('Notes JSON api', function() {
     it('can successfully create a new note', function(done) {
         superagent.post(resourceUrl)
             .send({
-                body: 'a new note!'
+                noteBody: 'a new note!'
             })
             .end(function(err, res) {
                 expect(err).to.eql(null);
@@ -29,7 +28,7 @@ describe('Notes JSON api', function() {
                 done();
             });
     });
-/*
+
     //testing the GET function of the JSON API
     it('can successfully get a note', function(done) {
         superagent.get(resourceUrl + '/' + id)
@@ -63,5 +62,4 @@ describe('Notes JSON api', function() {
                 done();
             });
     });
-*/
 });
